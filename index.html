@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrossHunt - Creator Arbitrage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                950: 'var(--bg-main)',    // Main Background
+                900: 'var(--bg-panel)',   // Cards/Panels
+                800: 'var(--bg-element)', // Inputs/Borders
+                700: 'var(--border)',     // Borders
+                500: 'var(--text-muted)', // Muted Text
+                400: 'var(--text-dim)',   // Dim Text
+                300: 'var(--text-sec)',   // Secondary Text
+                200: 'var(--text-main)',  // Main Text
+              },
+              cyan: {
+                500: 'var(--primary)',       // Primary Brand
+                400: 'var(--primary-hover)', // Hover State
+                900: 'var(--primary-dim)',   // Low opacity backgrounds
+              },
+              rose: {
+                400: 'var(--danger)',
+                500: 'var(--danger)',
+                950: 'var(--danger-dim)',
+              },
+              emerald: {
+                400: 'var(--success)',
+                500: 'var(--success)',
+                950: 'var(--success-dim)',
+              },
+              amber: {
+                400: 'var(--warning)',
+                500: 'var(--warning)',
+                950: 'var(--warning-dim)',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+      
+      /* Default Theme (Cyberpunk) Fallback */
+      :root {
+        --bg-main: #020617;
+        --bg-panel: #0f172a;
+        --bg-element: #1e293b;
+        --border: #334155;
+        --text-main: #e2e8f0;
+        --text-sec: #cbd5e1;
+        --text-dim: #94a3b8;
+        --text-muted: #64748b;
+        --primary: #06b6d4;
+        --primary-hover: #22d3ee;
+        --primary-dim: #164e63;
+        --danger: #fb7185;
+        --danger-dim: #4c0519;
+        --success: #34d399;
+        --success-dim: #064e3b;
+        --warning: #fbbf24;
+        --warning-dim: #451a03;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+      
+      /* Smooth transition for all color changes */
+      *, *::before, *::after {
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+      }
+      
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="antialiased selection:bg-cyan-500 selection:text-slate-950">
+    <div id="root"></div>
+  </body>
+</html>
